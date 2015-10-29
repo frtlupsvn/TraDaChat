@@ -97,7 +97,7 @@
                                                     <rect key="frame" x="51" y="8" width="261" height="83"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -143,6 +143,9 @@
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="Nqr-o5-B8N"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <animations/>
@@ -188,6 +191,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="keyboardContraint" destination="vNb-BF-NJB" id="zQP-6x-JT2"/>
                         <outlet property="tableviewChat" destination="qKv-wH-u8j" id="1Rn-Zg-V7Y"/>
                         <outlet property="txtChatField" destination="I6f-Of-1yb" id="z9R-8A-w3U"/>
                     </connections>

@@ -8,10 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource, UITextFieldDelegate {
     
     @IBOutlet weak var txtChatField: UITextField!
     @IBOutlet weak var tableviewChat: UITableView!
+    @IBOutlet weak var keyboardContraint: NSLayoutConstraint!
     
     var socket: SocketIOClient!
     var chatArrayMessage: NSMutableArray!
@@ -85,6 +86,14 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
         
+    }
+    
+    func textFieldDidBeginEditing(textField: UITextField) {
+        
+        keyboardContraint.constant = 220
+    }
+    func textFieldDidEndEditing(textField: UITextField) {
+        keyboardContraint.constant = 0
     }
 
 }
